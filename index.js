@@ -8,8 +8,6 @@ const transporter = nodemailer.createTransport(config.smtp);
 transporter.verify(function(err, success) {
   if (err) {
     console.log(err);
-  } else {
-    console.log('yes');
   }
 });
 
@@ -20,7 +18,6 @@ let record = []
 
 const url = config.groupUrl;
 const re = new RegExp('href="https:\/\/www\\.douban\\.com\/group\/topic\/(\\d*)\/" title="([^"]*' + config.keyword + '[^"]*)"', 'g');
-console.log(re)
 function doJob() {
   
   if (Date.now() - lastTime > 60 * 60 * 1000) { // request error lasted for over 1 hour
@@ -55,7 +52,6 @@ function doJob() {
         record.push(result[1]);
       }
     }
-    console.log(topics);
     
     if (topics.length) {
       const mail = {
