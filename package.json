@@ -1,0 +1,16 @@
+{
+  "name": "douban-alert",
+  "version": "1.0.0",
+  "description": "Douban rental information alert",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js --harmony"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^2.3.0",
+    "request": "^2.69.0"
+  }
+}
